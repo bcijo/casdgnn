@@ -57,5 +57,5 @@ def load_bitcoin_dataset(file_path):
     return G, node2idx, idx2node, pos_adj, neg_adj, edge_index, edge_signs, pos_edge_index, neg_edge_index
 
 # Example usage
-file_path = 'bitcoin_alpha.csv'  # Replace with your dataset path
-G, node2idx, idx2node, pos_adj, neg_adj, edge_index, edge_signs, pos_edge_index, neg_edge_index = load_bitcoin_dataset(file_path)
+# file_path = 'bitcoin_alpha.csv'  # Replace with your dataset path
+# G, node2idx, idx2node, pos_adj, neg_adj, edge_index, edge_signs, pos_edge_index, neg_edge_index = load_bitcoin_dataset(file_path)

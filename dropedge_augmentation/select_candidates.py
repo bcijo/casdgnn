@@ -38,6 +38,3 @@ def select_beneficial_candidates(G, add_candidates, del_candidates):
             G_aug.add_edge(i, j, sign=sign)
     
     return G_aug, filtered_add_candidates
-
-# Example usage
-G_aug, filtered_add_candidates = select_beneficial_candidates(G, add_candidates, del_candidates)
