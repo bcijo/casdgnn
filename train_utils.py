@@ -36,7 +36,10 @@ def pretrain(model, nodes, node_features, centrality_features, adj_matrices, nod
         optimizer.step()
         print(f"Epoch [{epoch+1}/{epochs}], Pretraining Loss: {loss.item():.4f}")
     
-    os.makedirs(os.path.dirname(save_path), exist_ok=True)
+    # Create directory if save_path includes a directory
+    save_dir = os.path.dirname(save_path)
+    if save_dir:  # Only create directory if save_dir is not empty
+        os.makedirs(save_dir, exist_ok=True)
     torch.save(model.state_dict(), save_path)
     print(f"Pretrained model saved to {save_path}")
 
@@ -87,6 +90,9 @@ def finetune(model, nodes, node_features, centrality_features, adj_matrices, nod
         optimizer.step()
         print(f"Epoch [{epoch+1}/{epochs}], Fine-tuning Loss: {loss.item():.4f}")
     
-    os.makedirs(os.path.dirname(save_path), exist_ok=True)
+    # Create directory if save_path includes a directory
+    save_dir = os.path.dirname(save_path)
+    if save_dir:  # Only create directory if save_dir is not empty
+        os.makedirs(save_dir, exist_ok=True)
     torch.save(model.state_dict(), save_path)
     print(f"Fine-tuned model saved to {save_path}")

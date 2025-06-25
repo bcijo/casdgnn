@@ -29,14 +29,14 @@ from common import DATASET_NUM_DIC
 
 class FeaExtra(object):
 
-    def __init__(self, dataset='epinions', k=1, debug=False):
-        filename = './experiment-data/{}-train-{}.edgelist'.format(dataset, k)
+    def __init__(self, dataset='bitcoin_alpha', k=1, debug=False):
+        filename = r'D:\abhin\Comding\ML\Capstone\casdgnn\experiment-data/{}-train-{}.edgelist'.format(dataset, k)
         if debug:
             filename = './test.edgelists'
         res = self.init_edgelists(filename=filename)
         self.pos_in_edgelists, self.pos_out_edgelists, self.neg_in_edgelists, self.neg_out_edgelists = res
 
-    def init_edgelists(self, filename='./experiment-data/epinions-train-1.edgelist'):
+    def init_edgelists(self, filename=r'D:\abhin\Comding\ML\Capstone\casdgnn\experiment-data/bitcoin_alpha-train-1.edgelist'):
         """Initialize edge lists from the dataset file."""
         pos_out_edgelists = defaultdict(list)
         neg_out_edgelists = defaultdict(list)

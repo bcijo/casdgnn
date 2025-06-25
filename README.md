@@ -120,3 +120,21 @@ python main.py \
 - `dropout_rate`: Dropout rate for regularization
 - `lr`: Learning rate for optimization
 - `weight_decay`: L2 regularization parameter
+
+## Advanced Usage: DropEdge Augmentation Integration
+
+The project includes an advanced integration that combines CASDGNN with graph augmentation techniques. This hybrid approach uses SGCN for graph augmentation and CASDGNN for final predictions.
+
+### Running the Integration
+
+```bash
+cd dropedge_augmentation
+python main.py
+```
+
+This integration provides:
+- Enhanced graph structure through balanced edge augmentation
+- Superior prediction performance on augmented graphs
+- Comprehensive evaluation metrics and detailed logging
+
+For more details, see the `dropedge_augmentation/readme.md` file.
